@@ -1,0 +1,88 @@
+body {
+	background-image: url("guessimage.jpeg");
+}
+
+div {
+	height: 200px;
+	background-color: #CCCCCC;
+	border-radius: 20px
+}
+
+#header {
+	margin: auto;
+	width: 50%;
+	text-align: center;
+	font: bold 40px Arial;
+   	text-shadow: 0px 2px 2px #4d4d4d;
+	color: white;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 0px 50px 0px #99FF99;
+}
+
+#inputbox {
+	margin: auto;
+	background-color: #CCFFCC;
+	box-shadow: 0px 0px 50px 0px #CCCCCC;
+	text-align: center;
+	font-family: Arial;
+	padding-top: 5px;	
+	margin-bottom: 30px;
+}
+
+span {
+	color: blue;
+}
+
+#userinput {
+	height: 50px;
+	width: 200px;
+	border-radius: 10px;
+	font-family: Arial;
+	font-size: 15px;
+	text-align: center;
+}
+
+#submitbutton {
+	height: 50px;
+	width: 100px;
+	border-radius: 10px;
+	font-family: Arial;
+	font-size: 15px;
+	text-align: center;
+}
+
+button {
+	height: 60px;
+	width: 200px;
+	border-radius: 10px;
+	font-family: Arial;
+	font-size: 15px;
+	text-align: center;
+	background-color: #CCCC99;
+}
+
+button:hover {
+	background-color: white;
+}
+
+#footer {
+	width: 30%;
+	height: 100px;
+	text-align: center;
+	font-family: Monotype Corsiva;
+	font-size: 20px;
+	padding: 20px;
+	box-shadow: 0px 0px 50px 0px #99FF99;
+	position: fixed;
+	bottom: 0%;
+	right: 0%; 
+}
+
+a {
+	font: 15px Arial;
+	color: blue;
+	vertical-align: bottom;
+}
