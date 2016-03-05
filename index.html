@@ -23,16 +23,23 @@
 	<body>
 		<div id="header">Welcome to Elizabeth's Guessing Game!</div>
 		<div id="inputbox">
-			<h1>Guess a <span>Number</span> <em>Between</em> <span>1 and 100 (inclusive)</span>:</h1>
+			<h1>Guess a <span>Number</span> <em>Between</em> <span>1 and 100</span> (inclusive):</h1>
 			<input type="number" placeholder="What's your guess?" class="form-control input" /><br>
 			<button type="button" id="submitbutton">Submit</button><button type="button" class="playagain">Reset</button><br>
 			<a href="#">Need a hint?</a><br>
 			<p id="status"></p>
 		</div>
+		<div id="history">
+			<p>Your History:</p>
+		</div>
+
 		<div id="footer">
 			<p>That was fun! Let's play again!</p>
 			<button type="button" class="playagain">Play Again</button>
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+		<script src="application.js"></script>
+		
 		<!-- This is only invoked when a player wins -->
 		<canvas class="congrats" id="confetti" width="1" height="1"></canvas>
 		<script class="congrats" type="text/javascript">
@@ -430,12 +437,6 @@
 				});
 			});
 		</script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
-		<script src="application.js"></script>
+		
 	</body>
-</html>
-
-
-	<body>
-			</body>
 </html>
