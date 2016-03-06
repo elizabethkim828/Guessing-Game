@@ -16,6 +16,7 @@ function playersGuessSubmission(){
 	function appendGuess() {
 		$('#history').show();
 		$('#history').find('p').append('<li>You guessed ' + playersGuess + '.</li>')
+		$('body').animate({scrollTop: document.body.scrollHeight});
 	};
 	appendGuess();
 	
@@ -30,8 +31,7 @@ function playersGuessSubmission(){
 // Check if the Player's guess is the winning number
 function checkGuess(){
 	if (playersGuess === winningNumber) {
-		$('#submitbutton').remove();
-		$('#status').text('CONGRATS! YOU ARE CORRECT!').show();
+		$('#status').text('CONGRATS! YOU WON!').show();
 		$('#footer').fadeIn();
 		$('.congrats').show();
 		$('.congrats').on('click', function(){
@@ -99,6 +99,7 @@ function feedback(){
 // Provide hints to help the Player guess
 
 function provideHint() {
+	event.preventDefault();
 	function prime(n) {
 		for (var i = 2; i < n; i++) {
 			if (n % i === 0) {
@@ -111,6 +112,7 @@ function provideHint() {
 	function appendHint(string) {
 		$('#history').show();
 		$('#history').find('p').append('<li>'+string+'</li>')
+		$('html, body').animate({scrollTop: document.body.scrollHeight}, 'slow');
 	}
 	
 	var r = new remainingGuesses();
@@ -150,11 +152,12 @@ function playAgain(){
 	location.reload();
 }
 
-// jQuery
+// EVENT HANDLERS
 $(document).ready(function() {
 	generateWinningNumber();
 	
 	$('#submitbutton').on('click', function() {
+		event.preventDefault();
 		if ($('input').val() !== "") {
 			playersGuessSubmission();
 			checkGuess();
