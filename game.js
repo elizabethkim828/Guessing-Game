@@ -1,6 +1,6 @@
 var gameOfLife = {
-  width: 12,
-  height: 12,
+  width: 20,
+  height: 20,
   stepInterval: null,
 
   createAndShowBoard: function () {
