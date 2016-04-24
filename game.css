@@ -27,3 +27,8 @@ td.dead {
   margin: 10px auto;
   text-align: center;
 }
+
+#summaryText {
+  margin: auto 10%;
+  text-align: left;
+}

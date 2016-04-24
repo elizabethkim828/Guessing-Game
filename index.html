@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Game of Life - Fullstack Academy</title>
+  <title>Conway's Game of Life</title>
   <link rel="stylesheet" href="bootstrap.min.css">
   <link rel="stylesheet" href="game.css">
 </head>
 
 <body>
-  <h2>Game of Life</h2>
+  <h2>Conway's Game of Life</h2>
   <table id='board'></table>
   
   <div id='control_panel'>
@@ -19,15 +19,16 @@
     <button id='step_btn' class='btn btn-success'>Step</button>
     <button id='clear_btn' class='btn btn-info'>Clear</button>
   </div>
-  
-  <br><br>
-
+  <br>
+  <div id='summaryText'>
+    <p class="text-muted">"This "game" is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves, or, for advanced "players", by creating patterns with particular properties." - <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Wikipedia</a></p>
+  </div>
+  <br>
   <footer class="footer">
-    <div class="container">
+    <div id='summaryText'>
       <p class="text-muted">Built by <a href="mailto:ejkimmit@gmail.com">Elizabeth Kim</a></p>
     </div>
   </footer>
-  
   <script src="game.js"></script>
   
 </body>
