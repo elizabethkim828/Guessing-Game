@@ -58,8 +58,25 @@ var gameOfLife = {
       }
     };
 
-    document.getElementById('clear_btn').onclick = function() { location.reload(); };
+    document.getElementById('clear_btn').onclick = this.clear;//{ location.reload(); };
+
+    // set initial pattern
+    gameOfLife.toggle(document.getElementById('10-10'));
+    gameOfLife.toggle(document.getElementById('9-9'));
+    gameOfLife.toggle(document.getElementById('9-10'));
+    gameOfLife.toggle(document.getElementById('9-11'));
+
   
+  },
+  
+  clear: function() {
+    for (var h = 0; h < gameOfLife.height; h++) {
+      for (var w = 0; w < gameOfLife.width; w++) {
+        var cell = document.getElementById(w+'-'+h);
+        cell.className = "dead";
+        cell.setAttribute('data-status', 'dead');
+      }
+    }
   },
 
   toggle: function(cell) {
@@ -128,4 +145,3 @@ var gameOfLife = {
 };
 
 gameOfLife.createAndShowBoard();
-
